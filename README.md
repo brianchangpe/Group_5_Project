@@ -1,4 +1,4 @@
-# Redefine Gentrification Project-Part 2
+# Redefine Gentrification Project
 
 ![Gentrification-progress.jpg](Images/Gentrification-progress.jpg)
 
@@ -10,9 +10,9 @@
 
 ### Files
 
-Insert Jupyter Notebook file link 1
+[California Housing Prices](Part-2/house_price_prediction.ipynb)
 
-Insert Google Colab Notebook file link 2
+Insert file link 2
 
 - - -
 
@@ -54,8 +54,6 @@ We would create a DAO (decentralized Autonomous Organization) with a token sale 
 
 [Attom Table of Data Elements](https://www.attomdata.com/data/)
 
-Insert link 2
-
-Insert link 3
+[California Housing Prices](https://www.kaggle.com/datasets/camnugent/california-housing-prices?resource=download)
 
 - - -
