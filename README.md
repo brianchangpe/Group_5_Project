@@ -49,11 +49,6 @@ In 2018, Los Angeles exhibited the highest rates of gentrification, with 10% of 
 
 With this data, communities will possess the same data that real estate investment companies use to gentrify cities. This gives a financial estimate as to what it would cost to redevelop a community.
 
-### **A World Without Gentrification!**
-
-### **So how would we do this?**
-We would create a DAO (decentralized Autonomous Organization) with a token sale based on the valuation data gained. The community will use this data to pick opportunity zones. The voting system that will be set up to these communities to hold a larger voting power than those just financially invested. We hope to build a future where the voting system can cover items such as which opportunity zones to invest in. Whether that being swim clubs over parks or basketball courts over tennis courts. Create a community that will truly reflect the people that live there. 
-
 - - -
 
 ## Summary of Project-Part 2
@@ -76,13 +71,22 @@ The general consensus of the stock and housing markets are that the prices are a
 
 ![SPY Forecast](Images/spy_forecast.png)
 
-### **S&P 500 (SPY) Prophet Forecast**
+### **NYC Prophet Forecast**
 
 ![NYC Forecast](Images/nyc_forecast.png)
 
+### **SPY & NYC Comparison**
+
+![NYC Forecast](Images/nyc_spy_stacked.png)
+
 - - -
 
+### **A World Without Gentrification!**
+
 ![Gentrification-1.jpg](Images/Gentrification-1.jpg)
+
+### **So how would we do this?**
+We would create a DAO (decentralized Autonomous Organization) with a token sale based on the valuation data gained. The community will use this data to pick opportunity zones. The voting system that will be set up to these communities to hold a larger voting power than those just financially invested. We hope to build a future where the voting system can cover items such as which opportunity zones to invest in. Whether that being swim clubs over parks or basketball courts over tennis courts. Create a community that will truly reflect the people that live there. 
 
 ### Resources
 
