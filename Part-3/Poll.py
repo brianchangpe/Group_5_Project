@@ -9,7 +9,7 @@ st.title("Create a New Poll")
 st.subheader("You can only cast one vote")
 
 # Bonus
-library = st.selectbox(
+library = st.radio(
     "Please select below",
     ("Yes", "No")
 )
