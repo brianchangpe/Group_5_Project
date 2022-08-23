@@ -8,7 +8,7 @@ st.title("Create a New Poll")
 # Create a subheader for your application
 st.subheader("You can only cast one vote")
 
-# Adding radio buttons for selections
+# Adding selections
 library = st.radio(
     "Please select below",
     ("Yes", "No")
