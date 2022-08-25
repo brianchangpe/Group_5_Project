@@ -9,13 +9,14 @@ contract ComVote {//is ERC20{
         uint voteCount;
         uint voteSupport;   
         uint pollId; 
+        uint pollDeadlineInHours;
     }
 
     address payable public chairperson;
     mapping(uint => Poll) public polls;
     //mapping(uint => address[] ) pollVoters; 
-    mapping (uint => mapping(address => bool)) pollVoters;
-    mapping(uint => address[] ) pollCommittee;
+    mapping (uint => mapping(address => bool)) public pollVoters;
+    mapping(uint => mapping(address => bool)) public pollCommittee;
     uint public NumberOfPolls = 0;
 
     constructor()public{
@@ -24,13 +25,7 @@ contract ComVote {//is ERC20{
 
     modifier isCommittee(uint pollId){
         //Poll storage poll = polls[pollId];
-        bool found = false;
-        for (uint i=0; i< pollCommittee[pollId].length; i++){
-            if (msg.sender == pollCommittee[pollId][i]){
-                found = true;
-            }
-        }
-        require(found, "You are not in that polls committee");
+        require(pollCommittee[pollId][msg.sender], "You are not in that polls committee");
         _;
     }
 
@@ -40,8 +35,14 @@ contract ComVote {//is ERC20{
         _;
     }
     
+    modifier isActive (uint pollId){
+        require(polls[pollId].pollDeadlineInHours > now, "This poll has ended.");
+        _;
+    }
+
     function addVoter(uint pollId, address newVoter) public isCommittee(pollId) {
         pollVoters[pollId][newVoter] = true;
+
     }
 
     function vote(uint pollId, bool support) public isVoter(pollId){
@@ -50,18 +51,20 @@ contract ComVote {//is ERC20{
             polls[pollId].voteSupport +=1;
         }
         pollVoters[pollId][msg.sender] = false;
+
     }
 
     function hasMajority(uint pollId) public view returns(bool){
-        return ( (polls[pollId].voteCount / 2) < polls[pollId].voteSupport );
+        return ( (polls[pollId].voteCount) < polls[pollId].voteSupport * 2);
     }
 
-    function createPoll(string memory _name, string memory _uri) public returns(uint256) {
+    function createPoll(string memory _name, string memory _uri, uint pollDeadlineInHours) public returns(uint256) {
         require (msg.sender == chairperson);
         NumberOfPolls += 1;
-        polls[NumberOfPolls] = Poll(_name, _uri, 0, 0, NumberOfPolls);
+        uint t =  pollDeadlineInHours * 1 hours;
+        polls[NumberOfPolls] = Poll(_name, _uri, 0, 0, NumberOfPolls, t);
+        pollCommittee[NumberOfPolls][chairperson] = true;
         return NumberOfPolls;
+        
     }
-
-
 }
