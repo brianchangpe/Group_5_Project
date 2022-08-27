@@ -82,9 +82,6 @@ address = w3.eth.accounts[0] # maybe use selected address in metamask or drop do
 st.title("Number of Active Polls: ")
 st.write(contract.functions.NumberOfPolls().call())
 
-for i in range(1, contract.functions.NumberOfPolls().call()+1):
-    print(i)
-
 
 # for i in range(1, numberofpolls+1)
 # loop (i) 1 thru numberofpolls 
