@@ -78,11 +78,9 @@ The general consensus of the stock and housing markets are that the prices are a
 
 In the final part of this project we launched a mission-driven DAO around redefining gentrification. To successfully implement this we contructed a smart contract where voters can create a poll and use their tokens to vote. Each eligible user can cast only one vote that is accurately recorded and counted. Making voting rights higher for community members. We hope this voting system will ensure that the choices made by its verified voters are legitimate, secure, and given equal opportunity.
 
-<iframe src="https://giphy.com/embed/zLDk3HW8JUOd3kzcUh" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/IntoAction-i-voted-sticker-vote-zLDk3HW8JUOd3kzcUh">via GIPHY</a></p>
+![](Images/giphy.gif)
 
 - - -
-
-![Gentrification-1.jpg](Images/Gentrification-1.jpg)
 
 ### Resources
 
