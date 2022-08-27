@@ -11,6 +11,11 @@
 
 ### Our mission is to provide each community with the financial cost of redeveloping from within and preventing gentrification by big businesses.
 
+### **Finally a World Without Gentrification! (Part three)**
+
+### So how would we do this?
+We create a DAO (decentralized Autonomous Organization) with a token sale based on the valuation data gained. The community will use this data to pick opportunity zones. The voting system that will be set up for these communities will hold a larger voting power than those just financially invested. We hope to build a future where the voting system can cover items such as which opportunity zones to invest in. Whether that being swim clubs over parks or basketball courts over tennis courts. Create a community that will truly reflect the people that live there. 
+
 - - -
 
 ### Files
@@ -55,25 +60,13 @@ With this data, communities will possess the same data that real estate investme
 
 ### **California Housing Prices**
 
-![Visualizing Geographical Data](Images/Geo_data_plot.png)
-
-This scatter plot shows where most of the houses in the dataset of median house prices for the state of California are positioned.
-
 ![Real vs Predicted Values](Images/Real_vs_Predicted_plot.png)
 
-We found that Random Forest had the lowest root mean squared error (RMSE) and continued using that to compare the median house prices. As you can see they weren’t that far apart from each other.
+We found that Random Forest had the lowest root mean squared error (RMSE) and continued using that to compare the median house prices in California. As you can see they weren’t that far apart.
 
 ### **SPY and NYC Housing Market Trend**
 
 The general consensus of the stock and housing markets are that the prices are affected by the Federal Funds Rate. While they do not directly dictate price action or mortgage rates, higher interest leads to lower demand and vice versa. The NYC housing market trendline seems to follow the S&P 500, but at a one year lag. 
-
-### **S&P 500 (SPY) Prophet Forecast**
-
-![SPY Forecast](Images/spy_forecast.png)
-
-### **NYC Prophet Forecast**
-
-![NYC Forecast](Images/nyc_forecast.png)
 
 ### **SPY & NYC Comparison**
 
@@ -81,12 +74,15 @@ The general consensus of the stock and housing markets are that the prices are a
 
 - - -
 
-### **A World Without Gentrification!**
+## Summary of Project-Part 3
+
+In the final part of this project we launched a mission-driven DAO around redefining gentrification. To successfully implement this we contructed a smart contract where voters can create a poll and use their tokens to vote. Each eligible user can cast only one vote that is accurately recorded and counted. Making voting rights higher for community members. We hope this voting system will ensure that the choices made by its verified voters are legitimate, secure, and given equal opportunity.
+
+<iframe src="https://giphy.com/embed/zLDk3HW8JUOd3kzcUh" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/IntoAction-i-voted-sticker-vote-zLDk3HW8JUOd3kzcUh">via GIPHY</a></p>
+
+- - -
 
 ![Gentrification-1.jpg](Images/Gentrification-1.jpg)
-
-### **So how would we do this?**
-We would create a DAO (decentralized Autonomous Organization) with a token sale based on the valuation data gained. The community will use this data to pick opportunity zones. The voting system that will be set up to these communities to hold a larger voting power than those just financially invested. We hope to build a future where the voting system can cover items such as which opportunity zones to invest in. Whether that being swim clubs over parks or basketball courts over tennis courts. Create a community that will truly reflect the people that live there. 
 
 ### Resources
 
