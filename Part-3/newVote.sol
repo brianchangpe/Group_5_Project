@@ -1,7 +1,10 @@
 pragma solidity ^0.5.0;
 
 
-contract ComVote {//is ERC20{
+import "./complexCityToken.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol";
+
+contract ComVote is ERC20{
 
     struct Poll{
         string name;
@@ -14,7 +17,6 @@ contract ComVote {//is ERC20{
 
     address payable public chairperson;
     mapping(uint => Poll) public polls;
-    //mapping(uint => address[] ) pollVoters; 
     mapping (uint => mapping(address => bool)) public pollVoters;
     mapping(uint => mapping(address => bool)) public pollCommittee;
     uint public NumberOfPolls = 0;
@@ -39,6 +41,10 @@ contract ComVote {//is ERC20{
         require(polls[pollId].pollDeadlineInHours > now, "This poll has ended.");
         _;
     }
+
+    function getBalance(address newVoter) public view returns(uint ){
+    return newVoter.balance;
+}
 
     function addVoter(uint pollId, address newVoter) public isCommittee(pollId) {
         pollVoters[pollId][newVoter] = true;
