@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
+//import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol";
 
-
-contract ComVote {//is ERC20{
+contract ComVote { //is ERC20 {
 
     struct Poll{
         string name;
@@ -10,7 +10,7 @@ contract ComVote {//is ERC20{
         uint voteSupport;   
         uint pollId; 
         uint pollDeadlineInHours;
-    }
+        }
 
     address payable public chairperson;
     mapping(uint => Poll) public polls;
@@ -35,6 +35,11 @@ contract ComVote {//is ERC20{
         _;
     }
     
+    modifier isChairperson{
+        require (msg.sender == chairperson);
+        _;
+    }
+
     modifier isActive (uint pollId){
         require(polls[pollId].pollDeadlineInHours > now, "This poll has ended.");
         _;
@@ -42,9 +47,14 @@ contract ComVote {//is ERC20{
 
     function addVoter(uint pollId, address newVoter) public isCommittee(pollId) {
         pollVoters[pollId][newVoter] = true;
-
     }
 
+    function addVotertoAll(address newVoter) public isChairperson{
+        for (uint i=1; i <= NumberOfPolls; i++){
+            pollVoters[i][newVoter] = true;
+        }
+    }
+    
     function vote(uint pollId, bool support) public isVoter(pollId){
         polls[pollId].voteCount += 1;
         if (support){
@@ -57,6 +67,8 @@ contract ComVote {//is ERC20{
     function hasMajority(uint pollId) public view returns(bool){
         return ( (polls[pollId].voteCount) < polls[pollId].voteSupport * 2);
     }
+
+
 
     function createPoll(string memory _name, string memory _uri, uint pollDeadlineInHours) public returns(uint256) {
         require (msg.sender == chairperson);
